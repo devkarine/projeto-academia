@@ -25,7 +25,7 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 6rem;
   gap: 3rem;
@@ -65,17 +65,14 @@ body {
   bottom: 0;
   left: 0;
   background-color: var(--fontsize);
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  border-radius: 0.4rem;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.25s;
 }
 
 .header .nav ul li a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  scale: 1;
 }
 
 .main .container {
@@ -83,7 +80,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: calc(100vh - 6rem);
   gap: 2.5rem;
   margin: 0 auto;
   text-align: center;
@@ -93,7 +90,6 @@ body {
   color: var(--fontsize);
   font-size: 5rem;
   width: 80rem;
-  
 }
 
 .main .container p {
